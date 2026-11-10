@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cafetería Andina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Cafetería Andina</h1>
+  <nav>
+    <button data-tab="panel" class="on">Panel</button>
+    <button data-tab="pedidos">Pedidos</button>
+    <button data-tab="productos">Productos</button>
+  </nav>
+</header>
+<main>
+  <section id="panel">
+    <div id="dash" class="dash"></div>
+  </section>
+
+  <section id="pedidos" hidden>
+    <form id="fPedido" class="form">
+      <select id="pCliente" required></select>
+      <select id="pProducto" required></select>
+      <input id="pCantidad" type="number" min="1" value="1" required aria-label="Cantidad">
+      <select id="pCanal"><option>local</option><option>domicilio</option><option>web</option></select>
+      <select id="pMetodo"><option>efectivo</option><option>tarjeta</option><option>nequi</option><option>daviplata</option></select>
+      <button class="primary">Registrar pedido</button>
+    </form>
+    <div class="scroll"><table id="tPedidos"></table></div>
+  </section>
+
+  <section id="productos" hidden>
+    <form id="fProducto" class="form">
+      <input id="prNombre" placeholder="Nombre" required>
+      <select id="prCategoria" required></select>
+      <input id="prPrecio" type="number" min="0" step="100" placeholder="Precio" required>
+      <input id="prStock" type="number" min="0" placeholder="Stock" required>
+      <button class="primary" id="prGuardar">Crear producto</button>
+      <button type="button" id="prCancelar" hidden>Cancelar edición</button>
+    </form>
+    <div class="scroll"><table id="tProductos"></table></div>
+  </section>
+</main>
+<div id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

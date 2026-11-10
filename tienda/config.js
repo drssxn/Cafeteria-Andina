@@ -1,0 +1,1 @@
+window.CONFIG = { SUPABASE_URL: "https://xqkbcgkfkbcjaxljcnec.supabase.co", SUPABASE_KEY: "sb_publishable_IzABz3dEskqxvC8J5UyqXg_U59JVCXq", LOOKER_URL: "https://datastudio.google.com/embed/reporting/548b1e22-cca5-44e5-a7a4-d5df1bed021e/page/7PJDG" };
