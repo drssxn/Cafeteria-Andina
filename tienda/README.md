@@ -2,7 +2,7 @@
 
 Aplicación web (HTML + JS) con persistencia en Supabase (PostgreSQL) y panel de Looker Studio embebido.
 
-**Integrantes:** _Nombres y apellidos de cada integrante_
+**Integrantes:** Fabian Andres Valdez Gonzalez
 
 ## Ejecución local
 1. `cp .env.example .env` y completa `SUPABASE_URL`, `SUPABASE_KEY` (anon) y `LOOKER_URL`.
